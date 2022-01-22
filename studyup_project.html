@@ -1,0 +1,53 @@
+
+			<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="./styles/content.css"/>
+		<title>projects | Jacob Dunefsky's personal page</title>
+	</head>
+	<body>
+			<div class="header">
+				<a class="header_name" href="./index.html">jacob dunefsky</a>
+				<span class="links">
+	<a class="link" href="./about.html">about</a>&nbsp;&nbsp;
+	<a class="link" href="./projects.html">projects</a>&nbsp;&nbsp;
+	<a class="link" href="./academics.html">academics</a>&nbsp;&nbsp;
+	<a class="link" href="./work.html">work</a>&nbsp;&nbsp;
+	<a class="link" href="./publications.html">publications</a>&nbsp;&nbsp;
+</span>
+			</div>
+			<div class="main_column">
+				
+			<div class="content_area">
+				<h2>StudyUp.</h2>
+				<p><i>Spring 2021</i></p>
+				
+				<hr/>
+				<p><a href="./projects.html">Back to all projects</a></p>
+			</div>
+
+			
+
+<div class="content_area">
+
+<p>StudyUp was a website I created that helped Yale students find study groups. Launched to all Yale undergrads just before finals in Spring 2021, by the end of finals, 206 users had joined, with 24 study groups created.</p>
+
+
+
+
+
+
+<p>The website was built with Django on the backend and HTML5/CSS3/vanilla JS on the frontend. To integrate the website with Yale's authentication system, I wrote a custom authentication backend. In this way, students didn't have to worry about the hassle of creating a new account, or giving passwords to a potentially untrusted source. And by using data obtained from Yale's student directory, when each student logged in, the website automatically would greet them with their first name.</p>
+<p>Similarly, course data was scraped from Yale's publicly available course search website. This data formed a primary part of the user experience: students would select the classes in which they were enrolled from a pre-populated, searchable list; upon selecting each course, the student would be added to a study group automatically. With this integration with the course data, students could use the same conceptual framework that they're used to.</p>
+<p>StudyUp was further integrated with Google Calendar. Whenever a time was set for a study session to meet, a Google Calendar invite would automatically be sent to all participants. This was made possible because all students' Yale email addresses were automatically associated with their accounts, and since all Yale email addresses use Google Apps, all email addresses are associated with a Google Calendar account, too.</p>
+<p>In integrating StudyUp with all of these services, an <b>important lesson</b> became apparent: <i>when creating a new service, you want to integrate the service seamlessly into the users' lives, as much as possible</i>. Most of us are set-in-our-ways, and too busy to spend time learning entirely new systems. For a new service that doesn't have any name or brand recognition, then unless the value proposition being made to the user is huge, they're not going to take the time to create new accounts, or set their own reminders. For this reason, it's essential that the app developer clear away any mental hurdles in the user, and integration is one of the best ways of doing this.</p>
+<p><b>Another lesson</b> that StudyUp taught me: <i>the work does not end after launch</i>! This might be obvious, but the full impact of this lesson doesn't hit you until you actually launch a product. After setting up the website on the hosting server I was using, after setting all the environment variables and configuration settings and installing all the packages, I wasn't afforded any time to rest on my laurels.</p>
+<p>Instead, once users started logging into the website, I started monitoring non-invasive usage statistics: how many unique users have logged in? Of that number, how many have selected their classes? The average student at Yale takes four or five classes per semester; how many classes did the average StudyUp user select? How many study groups have been formed? Of that number, how many students have started chatting with their fellow study buddies? And so on.</p>
+<p>From all this data, I began to draw conclusions -- and these conclusions demanded immediate solutions. For instance, when looking at the number of messages posted vs the number of study groups formed, it became clear that most students didn't know when another student joined their group. Instantly, I wrote a hotfix that would notify students by email when other students joined, and unsurprisingly, the number of messages began to rise. The <b>lesson</b> here: <i>usage data is paramount!</i></p>
+<p>Looking back, StudyUp was certainly an exciting experience. I went in expecting to primarily brush up on my fullstack webdev skills, but at the end of the day, the biggest takeaways were related to user experience and actually launching the product. It's certainly taught me some lessons that will stick with me forever.</p>
+</div>
+		
+			</div>
+	</body>
+</html>
+		

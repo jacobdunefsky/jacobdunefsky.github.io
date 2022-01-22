@@ -1,0 +1,45 @@
+
+			<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="./styles/content.css"/>
+		<title>projects | Jacob Dunefsky's personal page</title>
+	</head>
+	<body>
+			<div class="header">
+				<a class="header_name" href="./index.html">jacob dunefsky</a>
+				<span class="links">
+	<a class="link" href="./about.html">about</a>&nbsp;&nbsp;
+	<a class="link" href="./projects.html">projects</a>&nbsp;&nbsp;
+	<a class="link" href="./academics.html">academics</a>&nbsp;&nbsp;
+	<a class="link" href="./work.html">work</a>&nbsp;&nbsp;
+	<a class="link" href="./publications.html">publications</a>&nbsp;&nbsp;
+</span>
+			</div>
+			<div class="main_column">
+				
+			<div class="content_area">
+				<h2>Kubernetes networking plugin.</h2>
+				<p><i>December 2021</i></p>
+				<p><i>Source code:</i> <a href="https://github.com/jacobdunefsky/k8s-test-net">https://github.com/jacobdunefsky/k8s-test-net</a></p>
+				<hr/>
+				<p><a href="./projects.html">Back to all projects</a></p>
+			</div>
+
+			
+
+
+<div class="content_area">
+	
+<p>As my final project in my computer networks class, I implemented a CNI plugin which provides networking functionality to a Kubernetes cluster running on Linux nodes. The plugin consisted of two components. One component was the CNI script itself, responsible for assigning IP addresses and setting up veth pairs when a new pod is created. The other component was a setup script, to be run on each node, responsible for ensuring that each node is automatically connected to the same overlay network as the other nodes in the cluster.</p>
+
+
+	<p>In developing the CNI script, I made ample use of two great tutorials: <a href="https://sookocheff.com/post/kubernetes/understanding-kubernetes-networking-model/">one by Kevin Sookocheff</a> and one by <a href="https://www.altoros.com/blog/kubernetes-networking-writing-your-own-simple-cni-plug-in-with-bash/">Siarhei Matsiukevich</a>. In particular, the CNI script resembles that provided by the latter tutorial, although it was reimplemented from first principles rather than copy-pasted.</p>
+	<p>However, in developing the setup script, I had to fly completely solo, as both tutorials not only assumed that the cluster was run on a cloud provider's servers, but also that the user would manually set up routing between nodes. The setup script, however, automatically sets up routing without assuming anything about whether or not a cloud provider is used.</p>
+	<p>Over the course of this project, I not only obtained much hands-on experience with Kubernetes, but I got to dive deep into virtual networking with Linux, using industry-standard systems like network namespaces, veth pairs and bridges, and VXLAN.</p>
+</div>
+		
+			</div>
+	</body>
+</html>
+		

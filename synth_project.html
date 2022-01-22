@@ -1,0 +1,41 @@
+
+			<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="./styles/content.css"/>
+		<title>projects | Jacob Dunefsky's personal page</title>
+	</head>
+	<body>
+			<div class="header">
+				<a class="header_name" href="./index.html">jacob dunefsky</a>
+				<span class="links">
+	<a class="link" href="./about.html">about</a>&nbsp;&nbsp;
+	<a class="link" href="./projects.html">projects</a>&nbsp;&nbsp;
+	<a class="link" href="./academics.html">academics</a>&nbsp;&nbsp;
+	<a class="link" href="./work.html">work</a>&nbsp;&nbsp;
+	<a class="link" href="./publications.html">publications</a>&nbsp;&nbsp;
+</span>
+			</div>
+			<div class="main_column">
+				
+			<div class="content_area">
+				<h2>Synthesizer.</h2>
+				<p><i>2018</i></p>
+				<p><i>Source code:</i> <a href="https://github.com/jacobdunefsky/synth">https://github.com/jacobdunefsky/synth</a></p>
+				<hr/>
+				<p><a href="./projects.html">Back to all projects</a></p>
+			</div>
+
+			
+
+
+<div class="content_area">
+<p>"synth" is a synthesizer written in C++ using PortAudio and SFML. Instruments include a sine wave, a saw wave with chorus, a square wave with adjustable duty cycle, and multiple bell-like sounds created with additive synthesis. Adding new instruments in the source code is easily accomplished by extending the Instrument class. Polyphony is supported with five channels by default, although this can be changed easily in the source code. An oscilloscope view displays the current waveform being output by the synthesizer.</p>
+
+<p>An additional program, "track", allows for the storage and playback of monophonic melodies with the synthesizer. Melodies are written as text files in a simple format: each line either contains a "note off" command represented by "=", or two integers which represent the note and octave that should be played. Then, "track" can play back a text file at a tempo specified as a command-line argument.</p>
+</div>
+		
+			</div>
+	</body>
+</html>
+		
